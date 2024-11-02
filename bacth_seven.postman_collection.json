@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "780c9b2d-3127-48f8-ae10-363c73b87a00",
+		"name": "bacth_seven",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38181257"
+	},
+	"item": [
+		{
+			"name": "search",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.test(\"Search API returns results for the query 'Nike react phantom run flyknit 2'\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}search?keyword={{keyword}}",
+					"host": [
+						"{{base_url}}search"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "{{keyword}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addtocart",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Add to Cart API returns success\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"    pm.expect(pm.response.json().data.item).to.have.property('cart_item_id');\r",
+							"});\r",
+							"pm.test(\"Response time is within acceptable range\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sku\": \"NJC48508-Black-X\",\r\n    \"qty\": \"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}api/cart/mine/items",
+					"host": [
+						"{{base_url}}api"
+					],
+					"path": [
+						"cart",
+						"mine",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCart",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://demo.evershop.io/cart?sid=s%3A2171jxQ3Vi5RPQ_6GzjGsKnVOAFWjpK7.9bRf3uey3uRqbR%2B%2Be27ujZ6CIjt%2BzclEhphfaE6dpuY",
+					"protocol": "https",
+					"host": [
+						"demo",
+						"evershop",
+						"io"
+					],
+					"path": [
+						"cart"
+					],
+					"query": [
+						{
+							"key": "sid",
+							"value": "s%3A2171jxQ3Vi5RPQ_6GzjGsKnVOAFWjpK7.9bRf3uey3uRqbR%2B%2Be27ujZ6CIjt%2BzclEhphfaE6dpuY"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://demo.evershop.io/",
+			"type": "string"
+		},
+		{
+			"key": "keyword",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "sid",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
