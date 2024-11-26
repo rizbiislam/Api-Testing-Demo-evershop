@@ -2,49 +2,48 @@
 [GitHub Repository](https://github.com/rizbiislam/Api-Testing-Demo-evershop)  
 
 ## **Overview**  
-This project focuses on API testing for the Evershop e-commerce platform, showcasing expertise in ensuring backend functionality, reliability, and performance. The repository includes test scripts and a structured framework for testing RESTful APIs, ensuring seamless integration and data consistency.
+This repository demonstrates automated API testing using **Postman** for the Evershop e-commerce platform. It includes test cases designed to validate the functionality, performance, and reliability of various API endpoints.
 
 ---
 
 ## **Key Features**  
-- **Comprehensive API Test Cases:**  
-  - Authored test cases for critical endpoints such as user authentication, product management, cart operations, and order processing.  
-  - Validated response structures, status codes, and error handling to ensure adherence to API specifications.  
+- **Postman Collection:**  
+  - A complete set of Postman collections that test critical API endpoints of the Evershop platform, including authentication, product management, cart operations, and order processing.  
+  - Organized tests that cover **GET**, **POST**, **PUT**, and **DELETE** HTTP methods.
 
-- **Automated Testing Framework:**  
-  - Designed a scalable and reusable testing framework using modern tools like Postman/Newman, RestAssured, or other specified tools.  
-  - Automated API workflows to test scenarios end-to-end, including dependency chaining across endpoints.  
+- **Test Scripts and Validation:**  
+  - Test scripts are used to validate API responses, status codes, headers, and data integrity.  
+  - Includes tests for response time, API error handling, and edge cases.  
 
-- **Reporting and Analysis:**  
-  - Integrated reporting tools to provide clear insights into test results, failure points, and API performance metrics.  
+- **Environment Configuration:**  
+  - Postman environments are configured for different stages (e.g., development, staging, production) to ensure testing is aligned with the correct API endpoints and credentials.
 
-- **CI/CD Integration:**  
-  - Configured automated API testing in CI/CD pipelines using tools such as GitHub Actions or Jenkins, ensuring regular validation during development.
+- **Test Automation and Reporting:**  
+  - Automated tests can be run using Postman’s **Newman** CLI for integration with CI/CD pipelines.  
+  - Detailed reports are generated after test execution, providing insights into test results and API health.
 
 ---
 
-## **Technologies and Tools Used**  
-- **Programming Language:** Java, Python (or specify the exact language used).  
-- **API Testing Tools:** Postman/Newman, RestAssured, or any relevant tool.  
-- **Build Tool:** Maven/Gradle.  
-- **Version Control:** Git.  
-- **Reporting Tools:** Allure, Newman HTML Reporter (or any other specified tool).  
-- **CI/CD Tools:** GitHub Actions, Jenkins (if applicable).
+## **Technologies and Tools**  
+- **API Testing Tool:** Postman, Newman  
+- **Version Control:** Git  
+- **Reporting:** HTML and JSON-based reports (Newman)  
+- **Documentation:** Clear and concise README for setup and execution instructions.
 
 ---
 
 ## **Repository Highlights**  
-- **Structured Framework:** Includes modular and reusable test scripts for maintainability.  
-- **Test Execution Results:** Captures logs, responses, and detailed reports for thorough analysis.  
-- **Documentation:** Clear and concise README with setup instructions, dependencies, and execution guidelines.  
+- **Postman Collections:** The repository contains structured Postman collections to test various API endpoints of Evershop.  
+- **Test Scripts:** Comprehensive validation of status codes, response times, and API data integrity.  
+- **Automation Support:** Instructions for running automated tests with Newman to integrate into a CI/CD pipeline.
 
 ---
 
 ## **Achievements**  
-- Improved API test coverage and identified critical issues in backend logic.  
-- Reduced manual testing effort by automating complex workflows.  
-- Contributed to enhanced API performance and reliability through rigorous testing.
+- Ensured API endpoints function correctly through automated tests.  
+- Streamlined API testing by using Postman and Newman for reproducibility and automation.  
+- Enhanced the overall stability of the Evershop platform APIs by identifying issues early through comprehensive testing.
 
 ---
 
-Feel free to explore the repository for code samples, test results, and implementation details.
+Explore the repository to view the Postman collection, test scripts, and results.
